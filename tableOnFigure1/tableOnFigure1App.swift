@@ -12,10 +12,8 @@ struct tableOnFigure1App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }.windowStyle(.volumetric)
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
-        }.immersionStyle(selection: .constant(.full), in: .full)
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(width: 0.3, height: 0.3, depth: 0.3, in: .meters)
     }
 }

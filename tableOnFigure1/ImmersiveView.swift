@@ -7,13 +7,13 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
+import unity
 
 struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
             // Add the initial RealityKit content
-            if let immersiveContentEntity = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let immersiveContentEntity = try? await Entity(named: "Scene", in: unityBundle) {
                 content.add(immersiveContentEntity)
 
                 // Add an ImageBasedLight for the immersive content
